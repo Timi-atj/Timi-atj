@@ -20,7 +20,7 @@ const ChatScreen = () => {
     setMessages(prev => [...prev, userMsg]);
 
     try {
-      const response = await axios.post(`http://192.168.0.115:8000/chat`, {
+      const response = await axios.post(`https://reyne-bot.onrender.com/chat`, {
         message: userMessage,
       });
 
