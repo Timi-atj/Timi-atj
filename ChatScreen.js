@@ -20,9 +20,7 @@ const ChatScreen = () => {
     setMessages(prev => [...prev, userMsg]);
 
     try {
-      const response = await axios.post(`http://192.168.0.115:8000/chat`, {
-        message: userMessage,
-      });
+   const response = await axios.post(`${API_BASE_URL}/chat`, { message: userMessage });
 
       const aiReply = response.data.reply || "Sorry, I couldn't get a response from the AI.";
 
